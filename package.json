@@ -1,6 +1,6 @@
 {
   "name": "@kadi1m/axiomvault-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Client for AxiomVault log API — hashed, signed, immutable event logging",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -22,7 +22,12 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "keywords": ["axiomvault", "logging", "audit", "client"],
+  "keywords": [
+    "axiomvault",
+    "logging",
+    "audit",
+    "client"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -31,5 +36,7 @@
   "engines": {
     "node": ">=16"
   },
-  "files": ["dist"]
+  "files": [
+    "dist"
+  ]
 }

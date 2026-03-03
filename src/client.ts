@@ -31,7 +31,11 @@ export class Client {
 
     if (!res.ok) {
       const text = await res.text();
-      throw new Error(`AxiomVault log failed: ${res.status} ${text}`);
+      const isHtml = text.trimStart().toLowerCase().startsWith("<!doctype") || text.trimStart().toLowerCase().startsWith("<html");
+      const message = isHtml
+        ? `AxiomVault log failed: ${res.status} ${res.statusText} (origin server may be down or misconfigured)`
+        : `AxiomVault log failed: ${res.status} ${text}`;
+      throw new Error(message);
     }
 
     const data = (await res.json()) as LogResponse;

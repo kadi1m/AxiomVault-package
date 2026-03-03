@@ -1,6 +1,6 @@
 {
   "name": "@kadi1m/axiomvault-client",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Client for AxiomVault log API — hashed, signed, immutable event logging",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

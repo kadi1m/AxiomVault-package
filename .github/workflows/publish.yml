@@ -17,8 +17,8 @@ jobs:
           node-version: '20'
           registry-url: 'https://npm.pkg.github.com'
           scope: '@kadi1m'
-      - run: npm ci
+      - run: npm install
       - run: npm run build
-      - run: npm publish --provenance --access restricted
+      - run: npm publish --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

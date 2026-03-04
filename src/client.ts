@@ -18,6 +18,8 @@ export class Client {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        Accept: "*/*",
+        "User-Agent": "PostmanRuntime/7.44.1",
         Authorization: `Bearer ${this.apiKey}`,
       },
       body: JSON.stringify({

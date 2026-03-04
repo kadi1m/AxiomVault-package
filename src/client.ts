@@ -19,6 +19,8 @@ export class Client {
       headers: {
         "Content-Type": "application/json",
         Accept: "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        Connection: "keep-alive",
         "User-Agent": "PostmanRuntime/7.44.1",
         Authorization: `Bearer ${this.apiKey}`,
       },

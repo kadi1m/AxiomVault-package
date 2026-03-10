@@ -25,6 +25,7 @@ export class Client {
         Authorization: `Bearer ${this.apiKey}`,
       },
       body: JSON.stringify({
+        ...(payload.service !== undefined && payload.service !== "" && { service: payload.service }),
         type: payload.type,
         event: payload.event,
         ...(payload.actor !== undefined && { actor: payload.actor }),

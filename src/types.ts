@@ -14,6 +14,8 @@ export const LOG_TYPES = [
 export type LogType = (typeof LOG_TYPES)[number];
 
 export interface LogPayload {
+  /** Service name (e.g. "api", "worker"). Shown in panel sidebar; filter logs by service. */
+  service?: string;
   type: LogType;
   event: string;
   actor?: string;
